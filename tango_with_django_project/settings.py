@@ -56,7 +56,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [TEMPLATE_DIR, ],
-        'DIRS': ['<workspace>/tango_with_django_project/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
