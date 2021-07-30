@@ -23,12 +23,6 @@ def about(request):
     
     return render(request, 'rango/about.html')
 
-def about(request):
-    print(request.method)
-    print(request.user)
-    return render(request, 'rango/about.html', {})
-
-
 def show_category(request, category_name_slug):
     context_dict = {}
 
@@ -61,7 +55,7 @@ def add_category(request):
 def add_page(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
-    except Category.DoesNotExist:
+    except:
         category = None
     
     # You cannot add a page to a Category that does not exist... DM
